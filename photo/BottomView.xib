@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="BottomView" customModule="photo" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionview" destination="Pm2-wh-pea" id="orF-Uq-1hQ"/>
+                <outlet property="myview" destination="c22-O7-iKe" id="6xL-JB-1U9"/>
+                <outlet property="scrollview" destination="p84-VG-0NZ" id="jMO-Al-09A"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p84-VG-0NZ">
+                    <rect key="frame" x="0.0" y="0.0" width="454" height="40"/>
+                    <clipView key="contentView" id="RTT-5k-ipE">
+                        <rect key="frame" x="1" y="1" width="452" height="38"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="Pm2-wh-pea">
+                                <rect key="frame" x="0.0" y="0.0" width="452" height="38"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="cGJ-En-R5P">
+                                    <size key="itemSize" width="50" height="50"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="5Sg-gM-UUL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="9jw-Dm-SzS">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fRv-Ia-lZD">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="p84-VG-0NZ" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="IVP-Dd-Xtl"/>
+                <constraint firstAttribute="bottom" secondItem="p84-VG-0NZ" secondAttribute="bottom" id="OSd-sT-wve"/>
+                <constraint firstAttribute="trailing" secondItem="p84-VG-0NZ" secondAttribute="trailing" id="iXD-02-wbw"/>
+                <constraint firstItem="p84-VG-0NZ" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="p4b-Nn-kK1"/>
+            </constraints>
+            <point key="canvasLocation" x="255" y="154"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="6va-0t-cPI"/>
+    </objects>
+</document>

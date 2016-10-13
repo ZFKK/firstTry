@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="BackGroundView" customModule="audioceshi" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="9od-ib-VpZ" id="KQS-Ko-hCV"/>
+                <outlet property="infoText" destination="CCw-QE-BDF" id="Ouf-rt-WXE"/>
+                <outlet property="myview" destination="c22-O7-iKe" id="76T-Wb-0bF"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="25"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="9od-ib-VpZ" customClass="LoadingView" customModule="audioceshi" customModuleProvider="target">
+                    <rect key="frame" x="74" y="4" width="87" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="F1M-wD-Rao"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="89" id="hOE-C0-IXQ"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-QE-BDF">
+                    <rect key="frame" x="3" y="3" width="73" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="69" id="RGd-hW-nCS"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="正在连接中" id="YAJ-Sf-sRg">
+                        <font key="font" size="12" name="MicrosoftYaHei"/>
+                        <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9od-ib-VpZ" secondAttribute="trailing" constant="2" id="Chf-c2-gLZ"/>
+                <constraint firstItem="9od-ib-VpZ" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="FDB-bC-tHN"/>
+                <constraint firstItem="CCw-QE-BDF" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="2" id="Gbp-Re-upS"/>
+                <constraint firstItem="CCw-QE-BDF" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="McH-U0-Fcp"/>
+                <constraint firstItem="9od-ib-VpZ" firstAttribute="leading" secondItem="CCw-QE-BDF" secondAttribute="trailing" id="bqf-xU-4cG"/>
+            </constraints>
+            <point key="canvasLocation" x="264.5" y="229.5"/>
+        </customView>
+    </objects>
+</document>
