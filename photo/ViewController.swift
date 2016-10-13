@@ -25,7 +25,7 @@ class ViewController: NSViewController {
     
     @IBAction func 测试collection(sender: NSButton) {
         
-        
+        var ceshi : String!
     }
     
     
